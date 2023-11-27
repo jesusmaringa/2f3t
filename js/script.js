@@ -163,3 +163,17 @@ const set_n = () => {
     n = document.getElementById("n").value;
     mostrar_pa();
 }
+
+let num = 0;
+const mudar_imagem = () =>{ 
+    
+    num++; 
+
+    setTimeout(()=>{
+        document.getElementById("figura").src = "./img/imagem"+num+".jpg";
+        if(num == 3) num = 0;
+        mudar_imagem();
+    },5000);
+
+}
+mudar_imagem();
